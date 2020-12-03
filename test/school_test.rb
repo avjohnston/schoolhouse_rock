@@ -33,13 +33,13 @@ class SchoolTest < Minitest::Test
   end
 
   #Iteration 2 Tests:
-  def test_it_can_add_student_names
+  def test_it_can_add_student_name
     # skip
     school = School.new('9:00', 7)
 
-    school.add_student_names('Aurora')
-    school.add_student_names('tim')
-    school.add_student_names('megan')
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
 
     assert_equal ['Aurora', 'tim', 'megan'], school.student_names
   end
@@ -59,15 +59,15 @@ class SchoolTest < Minitest::Test
     assert_equal true, school.is_full_time?
   end
 
-  def test_standard_student_names
+  def test_standard_student_name
     # skip
     school = School.new('9:00', 7)
 
-    school.add_student_names('Aurora')
-    school.add_student_names('tim')
-    school.add_student_names('megan')
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
 
-    assert_equal ['Aurora', 'Tim', 'Megan'], school.standard_student_names
+    assert_equal ['Aurora', 'Tim', 'Megan'], school.standard_student_name
   end
 
   def test_convert_end_time_to_clock_time
